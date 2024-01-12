@@ -3,5 +3,50 @@ public class HelloWorld{
  public static void main(String[] args){
 	System.out.print("Hello Class");
 }
-
 }
+
+
+Next activity:
+
+Below is a Java program that demonstrates two distinct applications of arrays, 
+one with numbers and the other with strings.
+
+### Java Program
+
+```java
+public class ArrayExamples {
+    public static void main(String[] args) {
+        // Application 1: Numbers - Finding the average of an array of numbers
+        double[] numbers = {10.5, 20.3, 30.2, 40.7, 50.8};
+        double sum = 0;
+        for (double num : numbers) {
+            sum += num;
+        }
+        double average = sum / numbers.length;
+        System.out.println("Average of numbers: " + average);
+
+        // Application 2: Strings - Concatenating strings from an array
+        String[] words = {"Hello", "World", "from", "Java"};
+        StringBuilder sentence = new StringBuilder();
+        for (String word : words) {
+            sentence.append(word).append(" ");
+        }
+        System.out.println("Concatenated sentence: " + sentence.toString().trim());
+    }
+}
+```
+
+### Explanation
+
+1. **Application with Numbers**: 
+   - The program creates an array of double values (`numbers`).
+   - It then calculates the average of these numbers by iterating through the array, summing the values, and dividing by the length of the array.
+   - The average is printed to the console.
+
+2. **Application with Strings**: 
+   - The program also has an array of Strings (`words`).
+   - It concatenates all the strings in the array into a single sentence.
+   - This is achieved using a `StringBuilder` to efficiently append each string in the array, adding a space after each word.
+   - The final concatenated sentence is printed to the console.
+
+This program showcases basic yet practical uses of arrays with numbers and strings in Java.
